@@ -1,0 +1,75 @@
+//
+//  PrefixHeader.pch
+//  Travel_ios
+//
+//  Created by 李云鹏 on 17/5/12.
+//  Copyright © 2017年 yunPeng. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+#define WIDTH [UIScreen mainScreen].bounds.size.width
+#define HEIGHT [UIScreen mainScreen].bounds.size.height
+#define X frame.origin.x
+#define Y frame.origin.y
+#define PART_W frame.size.width
+#define PART_H frame.size.height
+#define MAINCOLOR [UIColor colorWithRed:31/255.0 green:165/255.0 blue:77/255.0 alpha:1]
+#define DETAILCOLOR [UIColor colorWithRed:149/255.0 green:193/255.0 blue:31/255.0 alpha:1]
+#define GRAY121COLOR [UIColor colorWithRed:121/255.0 green:121/255.0 blue:121/255.0 alpha:1]
+#define PLACEHOLODERCOLOR [UIColor colorWithRed:199/255.0 green:199/255.0 blue:205/255.0 alpha:1]
+#define DARKRED [UIColor colorWithRed:231/255.0 green:97/255.0 blue:83/255.0 alpha:1]
+#define WORDFONT [UIFont systemFontOfSize:15.5]
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define RGBACOLOR(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define CHECKPASSTIME @"2019-06-06"
+
+#define kNotificationCategoryIdentifile @"kNotificationCategoryIdentifile"
+#define kNotificationActionIdentifileStar @"kNotificationActionIdentifileStar"
+#define kNotificationActionIdentifileComment @"kNotificationActionIdentifileComment"
+
+//#define HEADHOST @"http://192.168.10.171:1818"//localhost
+#define HEADHOST @"http://localhost:1818"
+//#define HEADHOST @"https://apiv2.iguiyu.com"
+#define IPHOST @"http://123.59.129.126"
+
+#import "NetHandler.h"
+#import "AFNetworking.h"
+#import "MJRefresh.h"
+#import "NSObject+ALiHUD.h"
+#import "LoginViewController.h"
+#import "UIImageView+WebCache.h"
+#import "HyLoglnButton.h"
+#import "StateBarMsgView.h"
+#import "UIDevice+IdentifierAddition.h"
+#import "MMSheetView.h"
+#import "MMAlertView.h"
+#import "MMPinView.h"
+#import "JSESSIONID.h"
+#import "NSString+CheckPhoneNumber.h"
+#import "MBProgressHUD.h"
+#import "WebViewController.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

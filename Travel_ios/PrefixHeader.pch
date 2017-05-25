@@ -19,7 +19,7 @@
 #define Y frame.origin.y
 #define PART_W frame.size.width
 #define PART_H frame.size.height
-#define MAINCOLOR [UIColor colorWithRed:31/255.0 green:165/255.0 blue:77/255.0 alpha:1]
+#define MAINCOLOR [UIColor colorWithRed:0 green:108/255.0 blue:185/255.0 alpha:1]
 #define DETAILCOLOR [UIColor colorWithRed:149/255.0 green:193/255.0 blue:31/255.0 alpha:1]
 #define GRAY121COLOR [UIColor colorWithRed:121/255.0 green:121/255.0 blue:121/255.0 alpha:1]
 #define PLACEHOLODERCOLOR [UIColor colorWithRed:199/255.0 green:199/255.0 blue:205/255.0 alpha:1]
@@ -54,6 +54,8 @@
 #import "NSString+CheckPhoneNumber.h"
 #import "MBProgressHUD.h"
 #import "WebViewController.h"
+#import "NSObject+ALiHUD.h"
+#import "UIViewController+HUD.h"
 
 
 

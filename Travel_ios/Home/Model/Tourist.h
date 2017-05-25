@@ -23,7 +23,7 @@
  */
 @property(nonatomic, retain) NSString *introduction;
 /*!
- * @brief 时间节点
+ * @brief 背景图
  */
 @property(nonatomic, retain) NSString *img;
 /*!

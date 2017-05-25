@@ -1,17 +1,17 @@
 //
-//  HomeViewController.m
+//  CollectViewController.m
 //  Travel_ios
 //
-//  Created by 李云鹏 on 17/5/12.
+//  Created by 李云鹏 on 17/5/23.
 //  Copyright © 2017年 yunPeng. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "CollectViewController.h"
+#import "CollectTableViewCell.h"
 
-
-@interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface CollectViewController () <UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic, retain) UITableView *tableView;
-@property(nonatomic, retain) NSMutableArray *touristArr;
+@property(nonatomic, retain) NSMutableArray *collectArr;
 /*!
  * @brief 查询到第几条
  */
@@ -19,25 +19,26 @@
 
 @end
 
-@implementation HomeViewController
+@implementation CollectViewController
 
+#pragma mark - Life Cycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self consumer];
     self.count = 0;
     [self getView];
-    self.touristArr = [NSMutableArray array];
-    [self playTouristData];
+    self.collectArr = [NSMutableArray array];
+    [self playCollectData];
     __weak typeof(self) weakSelf = self;
     [self showStatus:@"暂无数据" imageName:@"nodata" type:@"" tapViewWithBlock:^{
-        [weakSelf playTouristData];
+        [weakSelf playCollectData];
     }];
 }
 
 - (void)consumer
 {
-    self.navigationItem.title = @"首页";
+    self.navigationItem.title = @"我的";
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
 }
 
@@ -49,10 +50,10 @@
     self.tableView.dataSource = self;
     __weak __typeof(self) weakSelf = self;
     [self.tableView addLegendHeaderWithRefreshingBlock:^{
-        [weakSelf playTouristData];
+        [weakSelf playCollectData];
     }];
     [self.tableView addLegendFooterWithRefreshingBlock:^{
-        [weakSelf playMoreTouristData];
+        [weakSelf playMoreCollectData];
     }];
     self.tableView.tableFooterView = [UIView new];
     [self.view addSubview:self.tableView];
@@ -61,78 +62,57 @@
 #pragma mark tableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.touristArr.count;
+    return self.collectArr.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 260;
+    return 70;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *str = @"546absad11qsdaQW";
-    TouristTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:str];
+    static NSString *str = @"546adasdadadqwbsdaQW";
+    CollectTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:str];
     if (cell == nil) {
-        cell = [[TouristTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:str];
+        cell =[[CollectTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:str];
     }
-    cell.tourist = self.touristArr[indexPath.row];
+    Collect *collect = self.collectArr[indexPath.row];
+    cell.collect = collect;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Tourist *tourist = self.touristArr[indexPath.row];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    Collect *collect = self.collectArr[indexPath.row];
     WebViewController *webVC = [[WebViewController alloc] init];
-    webVC.urlStr = tourist.detail;
+    webVC.urlStr = collect.src;
     [self.navigationController pushViewController:webVC animated:YES];
 }
 
 -(NSArray<UITableViewRowAction*>*)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Tourist *tourist = self.touristArr[indexPath.row];
-    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+    Collect *collect = self.collectArr[indexPath.row];
+    UITableViewRowAction *markAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"取消收藏" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
         __weak typeof(self) weakSelf = self;
-        NSString *str = [NSString stringWithFormat:@"%@/tourist/%ld", HEADHOST, tourist.id];
-        [NetHandler deleteDataWithUrl:str parameters:nil tokenKey:@"" tokenValue:@"" ifCaches:NO cachesData:^(NSData *cachesData) {
-        } success:^(NSData *successData) {
-            [weakSelf.touristArr removeObjectAtIndex:indexPath.row];
-            [weakSelf.tableView reloadData];
-            [self successAliHUD:@"删除成功" delay:1.5];
-        } failure:^(NSData *failureData) {
-        }];
-    }];
-    
-    NSString *collectStr = @"收藏";
-    if (tourist.collected) {
-        collectStr = @"取消收藏";
-    }
-    
-    UITableViewRowAction *markAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:collectStr handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-        __weak typeof(self) weakSelf = self;
-        NSString *str = [NSString stringWithFormat:@"%@/collect/%ld/add", HEADHOST, tourist.id];
-        if (tourist.collected) {
-            str = [NSString stringWithFormat:@"%@/collect/%ld/del", HEADHOST, tourist.id];
-        }
+        NSString *str = [NSString stringWithFormat:@"%@/collect/%ld/del", HEADHOST, collect.id];
         [NetHandler putDataWithUrl:str parameters:nil tokenKey:@"" tokenValue:@"" ifCaches:NO cachesData:^(NSData *cachesData) {
         } success:^(NSData *successData) {
-            tourist.collected = !tourist.collected;
+            [weakSelf.collectArr removeObjectAtIndex:indexPath.row];
             [weakSelf.tableView reloadData];
-            [self successAliHUD:[NSString stringWithFormat:@"%@成功", collectStr] delay:1.5];
+            [self successAliHUD:@"取消收藏成功" delay:1.5];
         } failure:^(NSData *failureData) {
         }];
     }];
-    
-    deleteAction.backgroundColor = [UIColor redColor];
     markAction.backgroundColor = UIColorFromRGB(0xd9d9d9);
-    NSArray *arr = @[deleteAction, markAction];
-    
+    NSArray *arr = @[markAction];
     return arr;
 }
 
 - (void)changeMessageFrame
 {
-    if (self.touristArr.count==0) {
+    if (self.collectArr.count==0) {
         [self show];
     }else{
         [self hide];
@@ -140,32 +120,30 @@
 }
 
 #pragma mark - 刷新
-- (void)playTouristData
+- (void)playCollectData
 {
     __weak typeof(self) weakSelf = self;
-    NSString *str = [NSString stringWithFormat:@"%@/tourist/0/10", HEADHOST];
+    NSString *str = [NSString stringWithFormat:@"%@/collect/list/0/10", HEADHOST];
     [NetHandler getDataWithUrl:str parameters:nil tokenKey:@"" tokenValue:@"" ifCaches:NO cachesData:^(NSData *cachesData) {
-#if 0
         id dict = [NSJSONSerialization JSONObjectWithData:cachesData options:NSJSONReadingMutableContainers error:nil];
-        [weakSelf.notifyArr removeAllObjects];
+        [weakSelf.collectArr removeAllObjects];
         [weakSelf.tableView reloadData];
         for (NSDictionary *dic in dict) {
-            Notify *notify = [[Notify alloc] initWithDictionary:dic];
-            [weakSelf.notifyArr addObject:notify];
+            Collect *collect = [[Collect alloc] initWithDictionary:dic];
+            [weakSelf.collectArr addObject:collect];
         }
         [weakSelf.tableView reloadData];
         [weakSelf changeMessageFrame];
         weakSelf.tableView.footer.state = 1;
-#endif
     } success:^(NSData *successData) {
         id dict = [NSJSONSerialization JSONObjectWithData:successData options:NSJSONReadingMutableContainers error:nil];
-        [weakSelf.touristArr removeAllObjects];
+        [weakSelf.collectArr removeAllObjects];
         [weakSelf.tableView reloadData];
         for (NSDictionary *dic in dict) {
-            Tourist *tourist = [[Tourist alloc] initWithDictionary:dic];
-            [weakSelf.touristArr addObject:tourist];
+            Collect *collect = [[Collect alloc] initWithDictionary:dic];
+            [weakSelf.collectArr addObject:collect];
         }
-        weakSelf.count = weakSelf.touristArr.count;
+        weakSelf.count = weakSelf.collectArr.count;
         [weakSelf.tableView reloadData];
         [weakSelf changeMessageFrame];
         [weakSelf.tableView.header endRefreshing];
@@ -177,18 +155,18 @@
 }
 
 #pragma mark - 加载更多
-- (void)playMoreTouristData
+- (void)playMoreCollectData
 {
     __weak typeof(self) weakSelf = self;
-    NSString *str = [NSString stringWithFormat:@"%@/tourist/%ld/10", HEADHOST, self.count];
+    NSString *str = [NSString stringWithFormat:@"%@/collect/list/%ld/10", HEADHOST, self.count];
     [NetHandler getDataWithUrl:str parameters:nil tokenKey:@"" tokenValue:@"" ifCaches:NO cachesData:^(NSData *cachesData) {
     } success:^(NSData *successData) {
         id dict = [NSJSONSerialization JSONObjectWithData:successData options:NSJSONReadingMutableContainers error:nil];
         NSInteger count = 0;
         for (NSDictionary *dic in dict) {
-            Tourist *tourist = [[Tourist alloc] initWithDictionary:dic];
-            [weakSelf.touristArr addObject:tourist];
-            weakSelf.count = weakSelf.touristArr.count;
+            Collect *collect = [[Collect alloc] initWithDictionary:dic];
+            [weakSelf.collectArr addObject:collect];
+            weakSelf.count = weakSelf.collectArr.count;
             count++;
         }
         [weakSelf.tableView reloadData];

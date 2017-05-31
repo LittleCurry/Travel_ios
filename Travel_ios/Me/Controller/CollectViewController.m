@@ -38,7 +38,7 @@
 
 - (void)consumer
 {
-    self.navigationItem.title = @"我的";
+    self.navigationItem.title = @"收藏";
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
 }
 
@@ -96,7 +96,7 @@
     Collect *collect = self.collectArr[indexPath.row];
     UITableViewRowAction *markAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"取消收藏" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
         __weak typeof(self) weakSelf = self;
-        NSString *str = [NSString stringWithFormat:@"%@/collect/%ld/del", HEADHOST, collect.id];
+        NSString *str = [NSString stringWithFormat:@"%@/collect/%ld/del", HEADHOST, collect.tourist_id];
         [NetHandler putDataWithUrl:str parameters:nil tokenKey:@"" tokenValue:@"" ifCaches:NO cachesData:^(NSData *cachesData) {
         } success:^(NSData *successData) {
             [weakSelf.collectArr removeObjectAtIndex:indexPath.row];

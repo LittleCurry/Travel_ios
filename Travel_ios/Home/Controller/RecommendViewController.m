@@ -16,6 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self getView];
+}
+
+- (void)getView
+{
+    
 }
 
 - (void)didReceiveMemoryWarning {

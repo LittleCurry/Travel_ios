@@ -21,7 +21,8 @@
 
 - (void)getView
 {
-    
+    self.navigationItem.title = @"社区";
+    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
 }
 
 - (void)didReceiveMemoryWarning {

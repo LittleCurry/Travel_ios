@@ -25,7 +25,6 @@
     [self consumer];
     [self getView];
     self.count = 0;
-    [self playCollectData];
 }
 
 - (void)consumer
@@ -47,6 +46,12 @@
     }];
     self.tableView.tableFooterView = [UIView new];
     [self.view addSubview:self.tableView];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self playCollectData];
 }
 
 - (void)settingAction

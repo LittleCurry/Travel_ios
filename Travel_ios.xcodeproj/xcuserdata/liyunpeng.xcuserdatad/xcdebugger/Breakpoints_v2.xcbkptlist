@@ -2,4 +2,109 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Travel_ios/Home/Controller/RecommendViewController.m"
+            timestampString = "520237974.114589"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RecommendViewController playLifeData]"
+                  moduleName = "Travel_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liyunpeng/Desktop/Travel_ios/Travel_ios/Home/Controller/RecommendViewController.m"
+                  timestampString = "520167987.40258"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "230">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__39-[RecommendViewController playLifeData]_block_invoke_2"
+                  moduleName = "Travel_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liyunpeng/Desktop/Travel_ios/Travel_ios/Home/Controller/RecommendViewController.m"
+                  timestampString = "520167987.406307"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "1391">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_.140"
+                  moduleName = "Travel_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liyunpeng/Desktop/Travel_ios/Travel_ios/Home/Controller/RecommendViewController.m"
+                  timestampString = "520167987.409019"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "37">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.141"
+                  moduleName = "Travel_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liyunpeng/Desktop/Travel_ios/Travel_ios/Home/Controller/RecommendViewController.m"
+                  timestampString = "520167987.411887"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__39-[RecommendViewController playLifeData]_block_invoke.143"
+                  moduleName = "Travel_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liyunpeng/Desktop/Travel_ios/Travel_ios/Home/Controller/RecommendViewController.m"
+                  timestampString = "520167987.41596"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

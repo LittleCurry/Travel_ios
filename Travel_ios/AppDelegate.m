@@ -38,7 +38,7 @@
     homeNVC.tabBarItem.selectedImage = [UIImage imageNamed:@"homing.png"];
     meNVC.tabBarItem.selectedImage = [UIImage imageNamed:@"ming.png"];
     homeNVC.title = @"首页";
-    recomendNVC.title = @"社区";
+    recomendNVC.title = @"足迹";
     meNVC.title = @"我的";
     
     UITabBarController *tab = [[UITabBarController alloc] init];

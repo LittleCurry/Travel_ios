@@ -7,6 +7,8 @@
 //
 
 #import "BaseViewController.h"
+#import "LifeTableViewCell.h"
+#import "Life.h"
 
 @interface RecommendViewController : BaseViewController
 

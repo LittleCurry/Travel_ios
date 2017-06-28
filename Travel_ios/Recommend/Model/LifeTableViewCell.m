@@ -1,14 +1,14 @@
 //
-//  TouristTableViewCell.m
+//  LifeTableViewCell.m
 //  Travel_ios
 //
-//  Created by 李云鹏 on 17/5/12.
+//  Created by 李云鹏 on 17/6/26.
 //  Copyright © 2017年 yunPeng. All rights reserved.
 //
 
-#import "TouristTableViewCell.h"
+#import "LifeTableViewCell.h"
 
-@implementation TouristTableViewCell
+@implementation LifeTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -42,11 +42,18 @@
     self.detailLabel.frame = CGRectMake(20, 40, self.contentView.PART_W-30, 50);
 }
 
-- (void)setTourist:(Tourist *)tourist
+- (void)setLife:(Life *)life
 {
-    [self.bigImage sd_setImageWithURL:tourist.img placeholderImage:[UIImage imageNamed:@"touristHolder.png"]];
-    self.titleLabel.text = tourist.title;
-    self.detailLabel.text = tourist.introduction;
+    NSData *data = [[NSData alloc] initWithBase64EncodedString:life.img options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    self.bigImage.image = [UIImage imageWithData:data];
+    // 字符串转Data
+//    NSString *str = @"encode string";
+    // 字符串转成Data
+//    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];// 13 bytes
+    // 加密Data
+//    NSData *encodeData = [data base64EncodedDataWithOptions:0];// 20 bytes
+    // 解密Data
+//    NSData *decodeData = [[NSData alloc] initWithBase64EncodedData:encodeData options:0];// 13 bytes
 }
 
 - (void)awakeFromNib {

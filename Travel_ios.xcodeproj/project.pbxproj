@@ -185,6 +185,8 @@
 		C1E1133B1ED4038C00D3A2A5 /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E1133A1ED4038C00D3A2A5 /* CollectViewController.m */; };
 		C1E1133E1ED4085000D3A2A5 /* Collect.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E1133D1ED4085000D3A2A5 /* Collect.m */; };
 		C1E113411ED408BF00D3A2A5 /* CollectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E113401ED408BF00D3A2A5 /* CollectTableViewCell.m */; };
+		C1EE0ABA1F039C98005B87E8 /* MakeShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1EE0AB91F039C98005B87E8 /* MakeShareViewController.m */; };
+		C1EE0ABD1F03BBBB005B87E8 /* MSSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1EE0ABC1F03BBBB005B87E8 /* MSSCollectionViewCell.m */; };
 		C1F9C0B01F012074004DBD3D /* Life.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F9C0AF1F012074004DBD3D /* Life.m */; };
 		C1F9C0B31F012267004DBD3D /* LifeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F9C0B21F012267004DBD3D /* LifeTableViewCell.m */; };
 		C1FFA4601ECD496F00916772 /* setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1FFA45E1ECD496F00916772 /* setting@2x.png */; };
@@ -527,6 +529,10 @@
 		C1E1133D1ED4085000D3A2A5 /* Collect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collect.m; sourceTree = "<group>"; };
 		C1E1133F1ED408BF00D3A2A5 /* CollectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectTableViewCell.h; sourceTree = "<group>"; };
 		C1E113401ED408BF00D3A2A5 /* CollectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectTableViewCell.m; sourceTree = "<group>"; };
+		C1EE0AB81F039C98005B87E8 /* MakeShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MakeShareViewController.h; path = Travel_ios/Recommend/Model/MakeShareViewController.h; sourceTree = SOURCE_ROOT; };
+		C1EE0AB91F039C98005B87E8 /* MakeShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MakeShareViewController.m; path = Travel_ios/Recommend/Model/MakeShareViewController.m; sourceTree = SOURCE_ROOT; };
+		C1EE0ABB1F03BBBB005B87E8 /* MSSCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSSCollectionViewCell.h; path = Travel_ios/Recommend/Model/MSSCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		C1EE0ABC1F03BBBB005B87E8 /* MSSCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSSCollectionViewCell.m; path = Travel_ios/Recommend/Model/MSSCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
 		C1F9C0AE1F012074004DBD3D /* Life.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Life.h; path = Travel_ios/Recommend/Model/Life.h; sourceTree = SOURCE_ROOT; };
 		C1F9C0AF1F012074004DBD3D /* Life.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Life.m; path = Travel_ios/Recommend/Model/Life.m; sourceTree = SOURCE_ROOT; };
 		C1F9C0B11F012267004DBD3D /* LifeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LifeTableViewCell.h; path = Travel_ios/Recommend/Model/LifeTableViewCell.h; sourceTree = SOURCE_ROOT; };
@@ -1206,6 +1212,8 @@
 			children = (
 				C18BEBBE1EC561FD00FB05A0 /* RecommendViewController.h */,
 				C18BEBBF1EC561FD00FB05A0 /* RecommendViewController.m */,
+				C1EE0AB81F039C98005B87E8 /* MakeShareViewController.h */,
+				C1EE0AB91F039C98005B87E8 /* MakeShareViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1224,6 +1232,8 @@
 			children = (
 				C1F9C0B11F012267004DBD3D /* LifeTableViewCell.h */,
 				C1F9C0B21F012267004DBD3D /* LifeTableViewCell.m */,
+				C1EE0ABB1F03BBBB005B87E8 /* MSSCollectionViewCell.h */,
+				C1EE0ABC1F03BBBB005B87E8 /* MSSCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1490,9 +1500,11 @@
 				C18BEAB21EC55DA700FB05A0 /* MSSBrowseModel.m in Sources */,
 				C18BEADA1EC55DA700FB05A0 /* SDWebImagePrefetcher.m in Sources */,
 				C18BEA8E1EC55DA700FB05A0 /* View+MASAdditions.m in Sources */,
+				C1EE0ABA1F039C98005B87E8 /* MakeShareViewController.m in Sources */,
 				C18BEAA81EC55DA700FB05A0 /* MMPopupitem.m in Sources */,
 				C18BEABE1EC55DA700FB05A0 /* HMScannerViewController.m in Sources */,
 				C18BEB071EC55DA700FB05A0 /* BaseViewController.m in Sources */,
+				C1EE0ABD1F03BBBB005B87E8 /* MSSCollectionViewCell.m in Sources */,
 				C18BE9081EC55C8F00FB05A0 /* ViewController.m in Sources */,
 				C18BEAE11EC55DA700FB05A0 /* UIView+WebCacheOperation.m in Sources */,
 				C18BEAE31EC55DA700FB05A0 /* SVProgressAnimatedView.m in Sources */,

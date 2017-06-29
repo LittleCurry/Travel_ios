@@ -34,6 +34,7 @@
 #define kNotificationActionIdentifileComment @"kNotificationActionIdentifileComment"
 
 //#define HEADHOST @"http://192.168.10.171:1818"//localhost
+//#define HEADHOST @"http://127.0.0.1:1818"
 #define HEADHOST @"http://localhost:1818"
 //#define HEADHOST @"https://apiv2.iguiyu.com"
 #define IPHOST @"http://123.59.129.126"

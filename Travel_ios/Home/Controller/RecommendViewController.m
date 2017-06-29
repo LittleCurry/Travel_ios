@@ -7,6 +7,7 @@
 //
 
 #import "RecommendViewController.h"
+#import "MakeShareViewController.h"
 
 @interface RecommendViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic, retain) UITableView *tableView;
@@ -36,7 +37,7 @@
 {
     self.navigationItem.title = @"足迹";
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"idea.png"] style:UIBarButtonItemStyleDone target:self action:@selector(makeShare)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"idea.png"] style:UIBarButtonItemStyleDone target:self action:@selector(choseImage)];
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, WIDTH, HEIGHT - 64 - 49) style:UITableViewStylePlain];
     self.tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
@@ -54,6 +55,57 @@
     
     
 }
+
+- (void)choseImage
+{
+    MakeShareViewController *makeVC = [[MakeShareViewController alloc] init];
+    makeVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:makeVC animated:YES];
+}
+
+/*
+- (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray<UIImage *> *)photos sourceAssets:(NSArray *)assets
+{
+    MakeShareViewController *makeVC = [[MakeShareViewController alloc] init];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:makeVC animated:YES completion:^{}];
+//    [picker presentViewController:makeVC animated:YES completion:^{}];
+    
+//    [self.navigationController pushViewController:makeVC animated:YES];
+    
+}
+
+- (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray<UIImage *> *)photos sourceAssets:(NSArray *)assets infos:(NSArray<NSDictionary *> *)infos
+{
+    MakeShareViewController *makeVC = [[MakeShareViewController alloc] init];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:makeVC animated:YES completion:^{}];
+    
+//    [self.navigationController pushViewController:makeVC animated:YES];
+    
+}
+
+*/
+
+
+
+// 选完照片
+/*
+func imagePickerController(_ picker: TZImagePickerController!, didFinishPickingPhotos photos: [UIImage]!, sourceAssets assets: [AnyObject]!, infos: [[AnyHashable: Any]]!) {
+    //
+    self.selectedPhotoArr.addObjects(from: photos)
+    self.changeCollectionAddButtonAndReloadData()
+    
+}
+
+// 拍完照片
+func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    self.pickerController.dismiss(animated: true) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage;
+        self.selectedPhotoArr.add(image)
+        self.changeCollectionAddButtonAndReloadData()
+    }
+    
+}
+ */
 
 - (void)makeShare
 {

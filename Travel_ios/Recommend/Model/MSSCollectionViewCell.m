@@ -14,15 +14,30 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        _imageView = [[UIImageView alloc]initWithFrame:self.contentView.bounds];
-        _imageView.backgroundColor = GRAY121COLOR;
-        [_imageView setContentScaleFactor:[[UIScreen mainScreen] scale]];
-        _imageView.contentMode =  UIViewContentModeScaleAspectFill;
-        _imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-        _imageView.clipsToBounds  = YES;
-        [self.contentView addSubview:_imageView];
+        self.bigImageView = [[UIImageView alloc] init];
+        self.delBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.bigImageView.contentScaleFactor = [UIScreen mainScreen].scale;
+//                          WithFrame:self.contentView.bounds];
+//        self.imageView.backgroundColor = GRAY121COLOR;
+        
+//        [self.imageView setContentScaleFactor:[[UIScreen mainScreen] scale]];
+        self.bigImageView.contentMode =  UIViewContentModeScaleAspectFill;
+        self.bigImageView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+        self.bigImageView.clipsToBounds  = YES;
+        self.delBtn.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+        [self.delBtn setTitle:@"╳" forState:0];
+        
+        
+        [self.contentView addSubview:self.bigImageView];
+        [self.contentView addSubview:self.delBtn];
     }
     return self;
+}
+
+- (void)applyLayoutAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes
+{
+    self.bigImageView.frame = self.contentView.bounds;
+    self.delBtn.frame = CGRectMake(self.contentView.frame.size.width-20, 0, 20, 20);
 }
 
 @end

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MSSCollectionViewCell : UICollectionViewCell
-@property (nonatomic,)UIImageView *imageView;
+@property (nonatomic, retain) UIImageView *bigImageView;
+@property (nonatomic, retain) UIButton *delBtn;// [x]
 
 @end

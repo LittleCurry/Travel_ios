@@ -64,37 +64,6 @@
 }
 
 /*
-- (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray<UIImage *> *)photos sourceAssets:(NSArray *)assets
-{
-    MakeShareViewController *makeVC = [[MakeShareViewController alloc] init];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:makeVC animated:YES completion:^{}];
-//    [picker presentViewController:makeVC animated:YES completion:^{}];
-    
-//    [self.navigationController pushViewController:makeVC animated:YES];
-    
-}
-
-- (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray<UIImage *> *)photos sourceAssets:(NSArray *)assets infos:(NSArray<NSDictionary *> *)infos
-{
-    MakeShareViewController *makeVC = [[MakeShareViewController alloc] init];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:makeVC animated:YES completion:^{}];
-    
-//    [self.navigationController pushViewController:makeVC animated:YES];
-    
-}
-
-*/
-
-
-
-// 选完照片
-/*
-func imagePickerController(_ picker: TZImagePickerController!, didFinishPickingPhotos photos: [UIImage]!, sourceAssets assets: [AnyObject]!, infos: [[AnyHashable: Any]]!) {
-    //
-    self.selectedPhotoArr.addObjects(from: photos)
-    self.changeCollectionAddButtonAndReloadData()
-    
-}
 
 // 拍完照片
 func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

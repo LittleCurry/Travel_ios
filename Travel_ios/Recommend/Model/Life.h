@@ -21,7 +21,7 @@
 /*!
  * @brief 图片
  */
-@property(nonatomic, retain) NSString *img;
+@property(nonatomic, retain) NSMutableArray *imgs;
 
 
 - (instancetype) initWithDictionary:(NSDictionary *)dic;

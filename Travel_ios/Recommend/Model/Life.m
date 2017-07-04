@@ -16,6 +16,20 @@
     if (self) {
         [self setValuesForKeysWithDictionary:dic];
         
+        if (![[dic objectForKey:@"imgs"] isKindOfClass:[NSNull class]]) {
+            NSMutableArray *tempArr = [NSMutableArray array];
+            for (NSDictionary *dic in [dic objectForKey:@"imgs"]) {
+//                CutTime *cutTime = [[CutTime alloc] initWithDictionary:dict];
+                [tempArr addObject:dic];
+            }
+            if (self.imgs == nil) {
+                self.imgs = [NSMutableArray array];
+            }
+            [self.imgs removeAllObjects];
+            self.imgs = tempArr;
+        }
+        
+        
     }
     return self;
 }

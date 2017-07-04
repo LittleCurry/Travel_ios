@@ -26,7 +26,7 @@
     [self getView];
     self.count = 0;
     self.lifeArr = [NSMutableArray array];
-    [self playLifeData];
+//    [self playLifeData];
     __weak typeof(self) weakSelf = self;
     [self showStatus:@"暂无数据" imageName:@"nodata" type:@"" tapViewWithBlock:^{
         [weakSelf playLifeData];

@@ -123,13 +123,14 @@ NSString *MSSReuseIdentifier = @"MSSCollectionViewCell";
     for (UIImage *aImage in self.selectedPhotoArr) {
         NSData *imageData = UIImageJPEGRepresentation(aImage, 0.5);
         NSString *encodeResult = [imageData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
-        [uploadArr addObject:encodeResult];
+        [uploadArr addObject:@{@"img":encodeResult}];
     }
     NSDictionary *postDic = @{@"info":@"nihaome", @"imgs":uploadArr};
     NSString *str = [NSString stringWithFormat:@"%@/share/makeShare", HEADHOST];
     [NetHandler postDataWithUrl:str parameters:postDic tokenKey:@"" tokenValue:@"" ifCaches:NO cachesData:^(NSData *cachesData) {
     } success:^(NSData *successData) {
         [self successAliHUD:@"上传成功" delay:1.5];
+        [self.navigationController popViewControllerAnimated:YES];
     } failure:^(NSData *failureData) {
         [self successAliHUD:@"上传失败" delay:1.5];
     }];

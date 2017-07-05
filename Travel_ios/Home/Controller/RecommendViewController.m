@@ -26,7 +26,7 @@
     [self getView];
     self.count = 0;
     self.lifeArr = [NSMutableArray array];
-//    [self playLifeData];
+    [self playLifeData];
     __weak typeof(self) weakSelf = self;
     [self showStatus:@"暂无数据" imageName:@"nodata" type:@"" tapViewWithBlock:^{
         [weakSelf playLifeData];
@@ -124,7 +124,50 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 260;
+    Life *life = self.lifeArr[indexPath.row];
+    NSDictionary *dic = @{NSFontAttributeName:WORDFONT};
+    CGRect rect = [life.info boundingRectWithSize:CGSizeMake(WIDTH-60, 10000) options:NSStringDrawingUsesLineFragmentOrigin attributes:dic context:nil];
+    return rect.size.height + 70 + [self rowCount: life.imgs.count]*(WIDTH-140)/3.0;
+}
+
+- (NSInteger)rowCount:(NSInteger)arrCount
+{
+    switch (arrCount) {
+        case 0:
+            return 0;
+            break;
+        case 1:
+            return 1;
+            break;
+        case 2:
+            return 1;
+            break;
+        case 3:
+            return 1;
+            break;
+        case 4:
+            return 2;
+            break;
+        case 5:
+            return 2;
+            break;
+        case 6:
+            return 2;
+            break;
+        case 7:
+            return 3;
+            break;
+        case 8:
+            return 3;
+            break;
+        case 9:
+            return 3;
+            break;
+            
+        default:
+            break;
+    }
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

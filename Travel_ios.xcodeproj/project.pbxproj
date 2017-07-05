@@ -172,6 +172,12 @@
 		C18BEBDE1EC59DAD00FB05A0 /* touristHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = C18BEBDD1EC59DAD00FB05A0 /* touristHolder.png */; };
 		C18FED3D1F04B2E9001F0E1D /* squareAdd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C18FED3B1F04B2E9001F0E1D /* squareAdd@2x.png */; };
 		C18FED3E1F04B2E9001F0E1D /* squareAdd@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C18FED3C1F04B2E9001F0E1D /* squareAdd@3x.png */; };
+		C1BFE4311F0B4C490046BAA1 /* NinePicView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BFE4301F0B4C490046BAA1 /* NinePicView.m */; };
+		C1BFE4341F0B4D0A0046BAA1 /* MakeShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BFE4331F0B4D0A0046BAA1 /* MakeShareViewController.m */; };
+		C1BFE4391F0B4D380046BAA1 /* LifeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BFE4361F0B4D380046BAA1 /* LifeTableViewCell.m */; };
+		C1BFE43A1F0B4D380046BAA1 /* MSSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BFE4381F0B4D380046BAA1 /* MSSCollectionViewCell.m */; };
+		C1BFE43D1F0B9D950046BAA1 /* head_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BFE43B1F0B9D950046BAA1 /* head_default@2x.png */; };
+		C1BFE43E1F0B9D950046BAA1 /* head_default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BFE43C1F0B9D950046BAA1 /* head_default@3x.png */; };
 		C1E113251ED3E89300D3A2A5 /* record@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E113191ED3E89300D3A2A5 /* record@2x.png */; };
 		C1E113261ED3E89300D3A2A5 /* record@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E1131A1ED3E89300D3A2A5 /* record@3x.png */; };
 		C1E113271ED3E89300D3A2A5 /* partner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E1131B1ED3E89300D3A2A5 /* partner@2x.png */; };
@@ -187,10 +193,7 @@
 		C1E1133B1ED4038C00D3A2A5 /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E1133A1ED4038C00D3A2A5 /* CollectViewController.m */; };
 		C1E1133E1ED4085000D3A2A5 /* Collect.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E1133D1ED4085000D3A2A5 /* Collect.m */; };
 		C1E113411ED408BF00D3A2A5 /* CollectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E113401ED408BF00D3A2A5 /* CollectTableViewCell.m */; };
-		C1EE0ABA1F039C98005B87E8 /* MakeShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1EE0AB91F039C98005B87E8 /* MakeShareViewController.m */; };
-		C1EE0ABD1F03BBBB005B87E8 /* MSSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1EE0ABC1F03BBBB005B87E8 /* MSSCollectionViewCell.m */; };
 		C1F9C0B01F012074004DBD3D /* Life.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F9C0AF1F012074004DBD3D /* Life.m */; };
-		C1F9C0B31F012267004DBD3D /* LifeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F9C0B21F012267004DBD3D /* LifeTableViewCell.m */; };
 		C1FFA4601ECD496F00916772 /* setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1FFA45E1ECD496F00916772 /* setting@2x.png */; };
 		C1FFA4611ECD496F00916772 /* setting@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1FFA45F1ECD496F00916772 /* setting@3x.png */; };
 /* End PBXBuildFile section */
@@ -515,6 +518,16 @@
 		C18BEBDD1EC59DAD00FB05A0 /* touristHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touristHolder.png; sourceTree = "<group>"; };
 		C18FED3B1F04B2E9001F0E1D /* squareAdd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squareAdd@2x.png"; sourceTree = "<group>"; };
 		C18FED3C1F04B2E9001F0E1D /* squareAdd@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squareAdd@3x.png"; sourceTree = "<group>"; };
+		C1BFE42F1F0B4C490046BAA1 /* NinePicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NinePicView.h; path = Travel_ios/Recommend/View/NinePicView.h; sourceTree = SOURCE_ROOT; };
+		C1BFE4301F0B4C490046BAA1 /* NinePicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NinePicView.m; path = Travel_ios/Recommend/View/NinePicView.m; sourceTree = SOURCE_ROOT; };
+		C1BFE4321F0B4D0A0046BAA1 /* MakeShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MakeShareViewController.h; path = Travel_ios/Recommend/Controller/MakeShareViewController.h; sourceTree = SOURCE_ROOT; };
+		C1BFE4331F0B4D0A0046BAA1 /* MakeShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MakeShareViewController.m; path = Travel_ios/Recommend/Controller/MakeShareViewController.m; sourceTree = SOURCE_ROOT; };
+		C1BFE4351F0B4D380046BAA1 /* LifeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LifeTableViewCell.h; path = Travel_ios/Recommend/View/LifeTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		C1BFE4361F0B4D380046BAA1 /* LifeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LifeTableViewCell.m; path = Travel_ios/Recommend/View/LifeTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		C1BFE4371F0B4D380046BAA1 /* MSSCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSSCollectionViewCell.h; path = Travel_ios/Recommend/View/MSSCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		C1BFE4381F0B4D380046BAA1 /* MSSCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSSCollectionViewCell.m; path = Travel_ios/Recommend/View/MSSCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		C1BFE43B1F0B9D950046BAA1 /* head_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "head_default@2x.png"; sourceTree = "<group>"; };
+		C1BFE43C1F0B9D950046BAA1 /* head_default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "head_default@3x.png"; sourceTree = "<group>"; };
 		C1E113191ED3E89300D3A2A5 /* record@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "record@2x.png"; sourceTree = "<group>"; };
 		C1E1131A1ED3E89300D3A2A5 /* record@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "record@3x.png"; sourceTree = "<group>"; };
 		C1E1131B1ED3E89300D3A2A5 /* partner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "partner@2x.png"; sourceTree = "<group>"; };
@@ -533,14 +546,8 @@
 		C1E1133D1ED4085000D3A2A5 /* Collect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collect.m; sourceTree = "<group>"; };
 		C1E1133F1ED408BF00D3A2A5 /* CollectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectTableViewCell.h; sourceTree = "<group>"; };
 		C1E113401ED408BF00D3A2A5 /* CollectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectTableViewCell.m; sourceTree = "<group>"; };
-		C1EE0AB81F039C98005B87E8 /* MakeShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MakeShareViewController.h; path = Travel_ios/Recommend/Model/MakeShareViewController.h; sourceTree = SOURCE_ROOT; };
-		C1EE0AB91F039C98005B87E8 /* MakeShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MakeShareViewController.m; path = Travel_ios/Recommend/Model/MakeShareViewController.m; sourceTree = SOURCE_ROOT; };
-		C1EE0ABB1F03BBBB005B87E8 /* MSSCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSSCollectionViewCell.h; path = Travel_ios/Recommend/Model/MSSCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
-		C1EE0ABC1F03BBBB005B87E8 /* MSSCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSSCollectionViewCell.m; path = Travel_ios/Recommend/Model/MSSCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
 		C1F9C0AE1F012074004DBD3D /* Life.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Life.h; path = Travel_ios/Recommend/Model/Life.h; sourceTree = SOURCE_ROOT; };
 		C1F9C0AF1F012074004DBD3D /* Life.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Life.m; path = Travel_ios/Recommend/Model/Life.m; sourceTree = SOURCE_ROOT; };
-		C1F9C0B11F012267004DBD3D /* LifeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LifeTableViewCell.h; path = Travel_ios/Recommend/Model/LifeTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		C1F9C0B21F012267004DBD3D /* LifeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LifeTableViewCell.m; path = Travel_ios/Recommend/Model/LifeTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		C1FFA45E1ECD496F00916772 /* setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting@2x.png"; sourceTree = "<group>"; };
 		C1FFA45F1ECD496F00916772 /* setting@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1214,10 +1221,10 @@
 		C18BEBAF1EC55FE600FB05A0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C1BFE4321F0B4D0A0046BAA1 /* MakeShareViewController.h */,
+				C1BFE4331F0B4D0A0046BAA1 /* MakeShareViewController.m */,
 				C18BEBBE1EC561FD00FB05A0 /* RecommendViewController.h */,
 				C18BEBBF1EC561FD00FB05A0 /* RecommendViewController.m */,
-				C1EE0AB81F039C98005B87E8 /* MakeShareViewController.h */,
-				C1EE0AB91F039C98005B87E8 /* MakeShareViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1234,10 +1241,12 @@
 		C18BEBB51EC55FE600FB05A0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C1F9C0B11F012267004DBD3D /* LifeTableViewCell.h */,
-				C1F9C0B21F012267004DBD3D /* LifeTableViewCell.m */,
-				C1EE0ABB1F03BBBB005B87E8 /* MSSCollectionViewCell.h */,
-				C1EE0ABC1F03BBBB005B87E8 /* MSSCollectionViewCell.m */,
+				C1BFE4351F0B4D380046BAA1 /* LifeTableViewCell.h */,
+				C1BFE4361F0B4D380046BAA1 /* LifeTableViewCell.m */,
+				C1BFE4371F0B4D380046BAA1 /* MSSCollectionViewCell.h */,
+				C1BFE4381F0B4D380046BAA1 /* MSSCollectionViewCell.m */,
+				C1BFE42F1F0B4C490046BAA1 /* NinePicView.h */,
+				C1BFE4301F0B4C490046BAA1 /* NinePicView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1263,6 +1272,8 @@
 				C11147111ED808F40047B571 /* nodata.png */,
 				C18FED3B1F04B2E9001F0E1D /* squareAdd@2x.png */,
 				C18FED3C1F04B2E9001F0E1D /* squareAdd@3x.png */,
+				C1BFE43B1F0B9D950046BAA1 /* head_default@2x.png */,
+				C1BFE43C1F0B9D950046BAA1 /* head_default@3x.png */,
 			);
 			path = picture;
 			sourceTree = "<group>";
@@ -1387,6 +1398,7 @@
 				C1E113261ED3E89300D3A2A5 /* record@3x.png in Resources */,
 				C1E1132E1ED3E89300D3A2A5 /* idea@3x.png in Resources */,
 				C18BE9131EC55C8F00FB05A0 /* LaunchScreen.storyboard in Resources */,
+				C1BFE43E1F0B9D950046BAA1 /* head_default@3x.png in Resources */,
 				C18BEAB91EC55DA700FB05A0 /* HMScanner.bundle in Resources */,
 				C18BE9101EC55C8F00FB05A0 /* Assets.xcassets in Resources */,
 				C18BEA771EC55DA700FB05A0 /* emj@3x.png in Resources */,
@@ -1395,6 +1407,7 @@
 				C1E113281ED3E89300D3A2A5 /* partner@3x.png in Resources */,
 				C18BE90B1EC55C8F00FB05A0 /* Main.storyboard in Resources */,
 				C18BEAF91EC55DA700FB05A0 /* TZAlbumCell.xib in Resources */,
+				C1BFE43D1F0B9D950046BAA1 /* head_default@2x.png in Resources */,
 				C1E1132D1ED3E89300D3A2A5 /* idea@2x.png in Resources */,
 				C11147121ED808F40047B571 /* nodata.png in Resources */,
 				C1E1132C1ED3E89300D3A2A5 /* message@3x.png in Resources */,
@@ -1463,6 +1476,7 @@
 				C18BEA711EC55DA700FB05A0 /* AFSecurityPolicy.m in Sources */,
 				C18BEB001EC55DA700FB05A0 /* TZPhotoPickerController.m in Sources */,
 				C18BEAE71EC55DA700FB05A0 /* HyLoglnButton.m in Sources */,
+				C1BFE4311F0B4C490046BAA1 /* NinePicView.m in Sources */,
 				C1E1133B1ED4038C00D3A2A5 /* CollectViewController.m in Sources */,
 				C18BEBC01EC561FD00FB05A0 /* RecommendViewController.m in Sources */,
 				C18BEA7F1EC55DA700FB05A0 /* UIImage+Gif.m in Sources */,
@@ -1471,6 +1485,7 @@
 				C18BEB031EC55DA700FB05A0 /* TZVideoPlayerController.m in Sources */,
 				C18BEAD71EC55DA700FB05A0 /* SDWebImageDownloader.m in Sources */,
 				C18BEA731EC55DA700FB05A0 /* AFURLResponseSerialization.m in Sources */,
+				C1BFE4391F0B4D380046BAA1 /* LifeTableViewCell.m in Sources */,
 				C18BEAB81EC55DA700FB05A0 /* HMScanerCardViewController.m in Sources */,
 				C18BEA871EC55DA700FB05A0 /* MASConstraint.m in Sources */,
 				C18BEAD81EC55DA700FB05A0 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -1508,12 +1523,11 @@
 				C18BEAB21EC55DA700FB05A0 /* MSSBrowseModel.m in Sources */,
 				C18BEADA1EC55DA700FB05A0 /* SDWebImagePrefetcher.m in Sources */,
 				C18BEA8E1EC55DA700FB05A0 /* View+MASAdditions.m in Sources */,
-				C1EE0ABA1F039C98005B87E8 /* MakeShareViewController.m in Sources */,
 				C18BEAA81EC55DA700FB05A0 /* MMPopupitem.m in Sources */,
 				C18BEABE1EC55DA700FB05A0 /* HMScannerViewController.m in Sources */,
 				C18BEB071EC55DA700FB05A0 /* BaseViewController.m in Sources */,
-				C1EE0ABD1F03BBBB005B87E8 /* MSSCollectionViewCell.m in Sources */,
 				C18BE9081EC55C8F00FB05A0 /* ViewController.m in Sources */,
+				C1BFE4341F0B4D0A0046BAA1 /* MakeShareViewController.m in Sources */,
 				C18BEAE11EC55DA700FB05A0 /* UIView+WebCacheOperation.m in Sources */,
 				C18BEAE31EC55DA700FB05A0 /* SVProgressAnimatedView.m in Sources */,
 				C18BEA961EC55DA700FB05A0 /* MJPhotoToolbar.m in Sources */,
@@ -1569,6 +1583,7 @@
 				C18BE90E1EC55C8F00FB05A0 /* Travel_ios.xcdatamodeld in Sources */,
 				C18BEA7E1EC55DA700FB05A0 /* NSObject+ALiHUD.m in Sources */,
 				C18BEABD1EC55DA700FB05A0 /* HMScannerMaskView.m in Sources */,
+				C1BFE43A1F0B4D380046BAA1 /* MSSCollectionViewCell.m in Sources */,
 				C18BEAD31EC55DA700FB05A0 /* NSData+ImageContentType.m in Sources */,
 				C18BEAE91EC55DA700FB05A0 /* SpinerLayer.m in Sources */,
 				C18BEAD91EC55DA700FB05A0 /* SDWebImageManager.m in Sources */,
@@ -1576,7 +1591,6 @@
 				C18BEAB31EC55DA700FB05A0 /* MSSBrowseRemindView.m in Sources */,
 				C18BEA891EC55DA700FB05A0 /* MASLayoutConstraint.m in Sources */,
 				C18BEAC01EC55DA700FB05A0 /* QRMenu.m in Sources */,
-				C1F9C0B31F012267004DBD3D /* LifeTableViewCell.m in Sources */,
 				C18BEABF1EC55DA700FB05A0 /* QRItem.m in Sources */,
 				C18BEA801EC55DA700FB05A0 /* UIViewController+HUD.m in Sources */,
 				C18BEA721EC55DA700FB05A0 /* AFURLRequestSerialization.m in Sources */,

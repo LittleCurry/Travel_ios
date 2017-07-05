@@ -26,6 +26,7 @@
 #define DARKRED [UIColor colorWithRed:231/255.0 green:97/255.0 blue:83/255.0 alpha:1]
 #define WORDFONT [UIFont systemFontOfSize:15.5]
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define BlackColor(alphaValue) [UIColor colorWithRed:0 green:0 blue:0 alpha:(alphaValue)]
 #define RGBACOLOR(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 #define CHECKPASSTIME @"2019-06-06"
 
@@ -57,6 +58,7 @@
 #import "WebViewController.h"
 #import "NSObject+ALiHUD.h"
 #import "UIViewController+HUD.h"
+#import "MJPhotoBrowser.h"
 
 
 

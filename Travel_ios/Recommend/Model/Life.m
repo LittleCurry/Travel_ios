@@ -18,9 +18,9 @@
         
         if (![[dic objectForKey:@"imgs"] isKindOfClass:[NSNull class]]) {
             NSMutableArray *tempArr = [NSMutableArray array];
-            for (NSDictionary *dic in [dic objectForKey:@"imgs"]) {
+            for (NSDictionary *dict in [dic objectForKey:@"imgs"]) {
 //                CutTime *cutTime = [[CutTime alloc] initWithDictionary:dict];
-                [tempArr addObject:dic];
+                [tempArr addObject:dict];
             }
             if (self.imgs == nil) {
                 self.imgs = [NSMutableArray array];

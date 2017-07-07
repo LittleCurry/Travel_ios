@@ -15,24 +15,31 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.headImg = [[UIImageView alloc] init];
-        self.titleLabel = [[UILabel alloc] init];
+        self.nameLabel = [[UILabel alloc] init];
         self.infoLabel = [[UILabel alloc] init];
         self.nineView = [[NinePicView alloc] init];
+        self.timeLabel = [[UILabel alloc] init];
+        self.commentImg = [[UIImageView alloc] init];
         
         
-        self.titleLabel.font = [UIFont systemFontOfSize:13];
-        self.titleLabel.textColor = [UIColor cyanColor];
-        self.titleLabel.textAlignment = 0;
+        self.nameLabel.font = [UIFont systemFontOfSize:13];
+        self.nameLabel.textColor = RGBACOLOR(101, 114, 140, 1);
+        self.nameLabel.textAlignment = 0;
         self.infoLabel.font = WORDFONT;
-        self.infoLabel.textColor = BlackColor(0.8);
-        self.titleLabel.text = @"昵称!!!";
-//        self.infoLabel.textAlignment = 0;
+//        self.infoLabel.textColor = BlackColor(0.8);
+        self.infoLabel.textColor = RGBACOLOR(70, 70, 70, 1);
+        self.nameLabel.text = @"Xxづ蒾夨ㄋ";
         self.infoLabel.numberOfLines = 0;
+        self.timeLabel.textColor = BlackColor(0.3);
+        self.timeLabel.font = [UIFont systemFontOfSize:13];
+        self.commentImg.image = [UIImage imageNamed:@"comment.png"];
         
         [self.contentView addSubview:self.headImg];
-        [self.contentView addSubview:self.titleLabel];
+        [self.contentView addSubview:self.nameLabel];
         [self.contentView addSubview:self.infoLabel];
         [self.contentView addSubview:self.nineView];
+        [self.contentView addSubview:self.timeLabel];
+        [self.contentView addSubview:self.commentImg];
     }
     return self;
 }
@@ -45,9 +52,11 @@ CGFloat aHeight = 0;
     self.headImg.frame = CGRectMake(5, 5, 40, 40);
     NSDictionary *dic = @{NSFontAttributeName:WORDFONT};
     CGRect rect = [self.currrntLife.info boundingRectWithSize:CGSizeMake(self.contentView.PART_W-60, 10000) options:NSStringDrawingUsesLineFragmentOrigin attributes:dic context:nil];
-    self.titleLabel.frame = CGRectMake(50, 10, self.contentView.PART_W-70, 20);
+    self.nameLabel.frame = CGRectMake(50, 10, self.contentView.PART_W-70, 20);
     self.infoLabel.frame = CGRectMake(50, 30, self.contentView.PART_W-60, rect.size.height);
     self.nineView.frame = CGRectMake(50, rect.size.height+30, WIDTH-140, [self rowCount:self.currrntLife.imgs.count]*(WIDTH-140)/3.0);
+    self.timeLabel.frame = CGRectMake(50, self.contentView.PART_H-30, self.contentView.PART_W-100, 20);
+    self.commentImg.frame = CGRectMake(self.contentView.PART_W-35, self.contentView.PART_H-30, 25, 25);
 }
 
 - (NSInteger)rowCount:(NSInteger)arrCount
@@ -83,7 +92,6 @@ CGFloat aHeight = 0;
         case 9:
             return 3;
             break;
-            
         default:
             break;
     }
@@ -93,9 +101,11 @@ CGFloat aHeight = 0;
 - (void)setLife:(Life *)life
 {
     self.currrntLife = life;
-//    [self.headImg sd_setImageWithURL:@"http://img2.imgtn.bdimg.com/it/u=2814844067,420417492&fm=214&gp=0.jpg" placeholderImage:[UIImage imageNamed:@"head_default.png"]];
-    [self.headImg sd_setImageWithURL:@"http://imgsrc.baidu.com/image/c0%3Dshijue%2C0%2C0%2C245%2C40/sign=a51c37d15bda81cb5aeb8b8e3a0fba63/78310a55b319ebc4bf37a9bc8826cffc1e171643.jpg" placeholderImage:[UIImage imageNamed:@"head_default.png"]];
+    [self.headImg sd_setImageWithURL:@"http://img2.imgtn.bdimg.com/it/u=2814844067,420417492&fm=214&gp=0.jpg" placeholderImage:[UIImage imageNamed:@"head_default.png"]];
+//    [self.headImg sd_setImageWithURL:@"http://imgsrc.baidu.com/image/c0%3Dshijue%2C0%2C0%2C245%2C40/sign=a51c37d15bda81cb5aeb8b8e3a0fba63/78310a55b319ebc4bf37a9bc8826cffc1e171643.jpg" placeholderImage:[UIImage imageNamed:@"head_default.png"]];
     self.infoLabel.text = life.info;
+    
+    self.timeLabel.text = life.create_time;
     NSMutableArray *tempArr = [NSMutableArray array];
     for (NSDictionary *dic in life.imgs) {
         NSData *data = [[NSData alloc] initWithBase64EncodedString:dic[@"img"] options:NSDataBase64DecodingIgnoreUnknownCharacters];

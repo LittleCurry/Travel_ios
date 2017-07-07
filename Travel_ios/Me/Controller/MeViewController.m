@@ -95,7 +95,7 @@
     headImg.layer.cornerRadius = 30;
     [headImg.layer setBorderWidth:0.5];
     [headImg.layer setBorderColor:GRAY121COLOR.CGColor];
-    [headImg sd_setImageWithURL:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495516870360&di=a700af304be5c237869ccaef37b16d96&imgtype=0&src=http%3A%2F%2Fwww.caslon.cn%2Fpics%2Fallimg%2Fbd3378986.jpg" placeholderImage:[UIImage imageNamed:@"touristHolder.png"]];
+    [headImg sd_setImageWithURL:@"http://img2.imgtn.bdimg.com/it/u=2814844067,420417492&fm=214&gp=0.jpg" placeholderImage:[UIImage imageNamed:@"touristHolder.png"]];
     [headView addSubview:headImg];
     UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(90, 110, 100, 20)];
     nameLabel.textColor = [UIColor whiteColor];

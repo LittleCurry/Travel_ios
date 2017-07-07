@@ -194,14 +194,14 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
 {
     __weak typeof(self) weakSelf = self;
     NSString *str = [NSString stringWithFormat:@"%@/share/0/10", HEADHOST];
-    [NetHandler getDataWithUrl:str parameters:nil tokenKey:@"" tokenValue:@"" ifCaches:NO cachesData:^(NSData *cachesData) {
+    [NetHandler getDataWithUrl:str parameters:nil tokenKey:@"" tokenValue:@"" ifCaches:YES cachesData:^(NSData *cachesData) {
 #if 0
         id dict = [NSJSONSerialization JSONObjectWithData:cachesData options:NSJSONReadingMutableContainers error:nil];
-        [weakSelf.notifyArr removeAllObjects];
+        [weakSelf.lifeArr removeAllObjects];
         [weakSelf.tableView reloadData];
         for (NSDictionary *dic in dict) {
-            Notify *notify = [[Notify alloc] initWithDictionary:dic];
-            [weakSelf.notifyArr addObject:notify];
+            Life *life = [[Life alloc] initWithDictionary:dic];
+            [weakSelf.lifeArr addObject:life];
         }
         [weakSelf.tableView reloadData];
         [weakSelf changeMessageFrame];
@@ -241,8 +241,10 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
             weakSelf.count = weakSelf.lifeArr.count;
             count++;
         }
-        [weakSelf.tableView reloadData];
-        [weakSelf changeMessageFrame];
+//        if (count>0) {
+            [weakSelf.tableView reloadData];
+            [weakSelf changeMessageFrame];
+//        }
         [weakSelf.tableView.footer endRefreshing];
         if (count <10) {
             [weakSelf.tableView.footer noticeNoMoreData];

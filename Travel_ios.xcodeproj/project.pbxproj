@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C106C4301F0CC0C300C24FF6 /* comment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C106C42E1F0CC0C300C24FF6 /* comment@2x.png */; };
+		C106C4311F0CC0C300C24FF6 /* comment@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C106C42F1F0CC0C300C24FF6 /* comment@3x.png */; };
 		C11147121ED808F40047B571 /* nodata.png in Resources */ = {isa = PBXBuildFile; fileRef = C11147111ED808F40047B571 /* nodata.png */; };
 		C12DB2361EC9863E007B40E6 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12DB2351EC9863E007B40E6 /* WebViewController.m */; };
 		C18BE9021EC55C8F00FB05A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C18BE9011EC55C8F00FB05A0 /* main.m */; };
@@ -216,6 +218,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C106C42E1F0CC0C300C24FF6 /* comment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "comment@2x.png"; sourceTree = "<group>"; };
+		C106C42F1F0CC0C300C24FF6 /* comment@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "comment@3x.png"; sourceTree = "<group>"; };
 		C11147111ED808F40047B571 /* nodata.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nodata.png; sourceTree = "<group>"; };
 		C12DB2341EC9863E007B40E6 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		C12DB2351EC9863E007B40E6 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
@@ -1274,6 +1278,8 @@
 				C18FED3C1F04B2E9001F0E1D /* squareAdd@3x.png */,
 				C1BFE43B1F0B9D950046BAA1 /* head_default@2x.png */,
 				C1BFE43C1F0B9D950046BAA1 /* head_default@3x.png */,
+				C106C42E1F0CC0C300C24FF6 /* comment@2x.png */,
+				C106C42F1F0CC0C300C24FF6 /* comment@3x.png */,
 			);
 			path = picture;
 			sourceTree = "<group>";
@@ -1392,6 +1398,7 @@
 				C18BEAEF1EC55DA700FB05A0 /* photo_def_photoPickerVc@2x.png in Resources */,
 				C18BEAFB1EC55DA700FB05A0 /* VideoSendIcon@2x.png in Resources */,
 				C1FFA4611ECD496F00916772 /* setting@3x.png in Resources */,
+				C106C4311F0CC0C300C24FF6 /* comment@3x.png in Resources */,
 				C18BEA7A1EC55DA700FB05A0 /* HUD_info@2x.png in Resources */,
 				C18BEA991EC55DA700FB05A0 /* MJRefresh.bundle in Resources */,
 				C18BEBDE1EC59DAD00FB05A0 /* touristHolder.png in Resources */,
@@ -1406,6 +1413,7 @@
 				C18BEA7D1EC55DA700FB05A0 /* HUD_success@3x.png in Resources */,
 				C1E113281ED3E89300D3A2A5 /* partner@3x.png in Resources */,
 				C18BE90B1EC55C8F00FB05A0 /* Main.storyboard in Resources */,
+				C106C4301F0CC0C300C24FF6 /* comment@2x.png in Resources */,
 				C18BEAF91EC55DA700FB05A0 /* TZAlbumCell.xib in Resources */,
 				C1BFE43D1F0B9D950046BAA1 /* head_default@2x.png in Resources */,
 				C1E1132D1ED3E89300D3A2A5 /* idea@2x.png in Resources */,

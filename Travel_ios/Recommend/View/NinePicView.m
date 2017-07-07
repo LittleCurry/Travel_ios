@@ -82,7 +82,7 @@ static const CGFloat kPicPadding = 4;       // 图片间距
         UIImageView *imgView = self.picViewArr[i];
         imgView.image = img;
         imgView.userInteractionEnabled = YES;
-        imgView.tag = 10086+i;
+        imgView.tag = 10000+i;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPic:)];
         [imgView addGestureRecognizer:tap];
 //        [imgView sd_setImageWithURL:[NSURL URLWithString:picUrlStr]];
@@ -100,7 +100,7 @@ static const CGFloat kPicPadding = 4;       // 图片间距
         [photos addObject:currentPhoto];
     }
     browser.photos = photos;
-    browser.currentPhotoIndex = img.tag-10086;
+    browser.currentPhotoIndex = img.tag-10000;
     [browser show];
 }
 // 布局图片的位置

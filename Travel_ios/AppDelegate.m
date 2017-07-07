@@ -43,8 +43,8 @@
     
     UITabBarController *tab = [[UITabBarController alloc] init];
     tab.tabBar.tintColor = MAINCOLOR;
-//    tab.viewControllers = @[homeNVC, recomendNVC, meNVC];
-    tab.viewControllers = @[recomendNVC];
+    tab.viewControllers = @[homeNVC, recomendNVC, meNVC];
+//    tab.viewControllers = @[recomendNVC];
     self.window.rootViewController = tab;
     return YES;
 }

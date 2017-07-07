@@ -19,6 +19,10 @@
  */
 @property(nonatomic, retain) NSString *info;
 /*!
+ * @brief 时间
+ */
+@property(nonatomic, retain) NSString *create_time;
+/*!
  * @brief 图片
  */
 @property(nonatomic, retain) NSMutableArray *imgs;

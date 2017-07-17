@@ -91,6 +91,7 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
 #pragma mark - image picker delegte
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    // 上传照片要修改服务器的性能, 否则速度太慢
     [picker dismissViewControllerAnimated:YES completion:^{}];
     UIImage *choseImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     NSData *imageData = UIImageJPEGRepresentation(choseImage, 0.5);

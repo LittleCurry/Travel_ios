@@ -107,6 +107,7 @@ NSString *MSSReuseIdentifier = @"MSSCollectionViewCell";
 
 - (void)shareFriend
 {
+    // 分享
     NSString *errMsg = @"";
     if (self.nowTextField.text.length <= 0) {
         errMsg = [errMsg stringByAppendingString:@"文字内容不能为空 "];

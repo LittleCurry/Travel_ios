@@ -23,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 推荐tab
     [self getView];
     self.count = 0;
     self.lifeArr = [NSMutableArray array];

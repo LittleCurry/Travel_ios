@@ -134,6 +134,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    // 不同的cell点击事件未加, 点击设置也为实现
     if (indexPath.row == 2) {
         CollectViewController *collectVC = [[CollectViewController alloc] init];
         collectVC.hidesBottomBarWhenPushed = YES;

@@ -23,6 +23,7 @@
     // 登录相关的client与sever
     // 存储图片的方式要优化, 否则效率太低
     // 图片是放到硬盘的某个位置, 对外给一个域名+地址, 取出来拼接
+    // 
     //
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];

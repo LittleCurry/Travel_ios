@@ -20,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //
-    // 登录相关的client与sever
+    // 登录相关的client与sever, redis服务器存储的是key-value形式的键值对
     // 存储图片的方式要优化, 否则效率太低
     // 图片是放到硬盘的某个位置, 对外给一个域名+地址, 取出来拼接
     // 
